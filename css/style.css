@@ -1,0 +1,636 @@
+* {
+  margin: 0;
+  padding: o;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  color: #555;
+  font-family: "Lato", "Ariel", "san-serif";
+  font-size: 20px;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  box-sizing: border-box;
+  height: 80px;
+  width: 100%;
+  border-bottom: 1px solid #3498db;
+  background-color: rgba(85, 85, 85, 0.74);
+  z-index: 1000;
+}
+
+nav a {
+  padding: 10px 2px;
+  text-decoration: none;
+  color: #fff;
+  position: absolute;
+  margin-top: 15px;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.about-btn:link,
+.about-btn:visited {
+  left: 90%;
+}
+
+.features-btn:link,
+.features-btn:visited {
+  left: 30%;
+}
+
+.service-btn:link,
+.services-btn:visited {
+  left: 60%;
+}
+
+.home-btn:link,
+.home-btn:visited {
+  left: 5%;
+}
+
+nav a:hover,
+nav a:active {
+  color: #1b3c51;
+  border-bottom: 1px solid #1985c7;
+}
+
+header {
+  background-size: cover;
+  height: 100vh;
+  background-image: linear-gradient(#000000bb, #000000af), url(img/hero.jpg);
+  background-size: cover;
+}
+
+.row {
+  margin: 0 auto;
+  max-width: 70%;
+}
+
+.hero-text-box {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #fff;
+  font-size: 250%;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+}
+
+h1:after {
+  display: block;
+  height: 2px;
+  width: 100px;
+  background-color: #3498db;
+  content: " ";
+  margin: 30px auto;
+}
+
+.hero-text {
+  color: #fff;
+  font-size: 150%;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 50px;
+  border-radius: 200px;
+  border: solid 1px #3498db;
+  margin-top: 50px;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited {
+  color: #fff;
+  background-color: #3498db;
+  margin-right: 10px;
+}
+.btn-ghost:link,
+.btn-ghost:visited {
+  color: #3498db;
+  margin-left: 10px;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: #1985c7;
+  border: 1px solid #1985c7;
+  color: #fff;
+}
+
+.feature {
+  background-color: #f1f1f1;
+  background-size: cover;
+  height: auto;
+  margin: 0;
+  position: relative;
+  color: #555;
+  padding: 100px 0;
+}
+
+section h2 {
+  font-size: 200%;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #3498db;
+}
+
+section h2:after {
+  display: block;
+  height: 2px;
+  width: 100px;
+  background-color: #555;
+  content: " ";
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.hero-feature p {
+  font-size: 100%;
+  font-weight: 300;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  width: 50%;
+  margin-left: 25%;
+  text-align: center;
+}
+
+.hero-box {
+  padding-top: 5%;
+}
+
+.feature-box-container {
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 5%;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+}
+
+.feature-box-container h3 {
+  text-align: center;
+  font-size: 100%;
+  font-weight: 400;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #3498db;
+}
+
+.feature-box {
+  width: 90%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 10% 5%;
+  transition: transform 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-10px);
+}
+
+.feature-box-container li {
+  font-size: 90%;
+  font-weight: 300;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.service {
+  height: auto;
+  margin: 0;
+  color: #fff;
+  background-image: linear-gradient(#0000009c, #000000d0), url(img/services.jpg);
+  background-size: cover;
+}
+
+.service h2 {
+  padding: 10% 0 0 0;
+  color: #fff;
+}
+
+.service h2:after {
+  display: block;
+  height: 2px;
+  width: 100px;
+  background-color: #3498db;
+  content: " ";
+  margin: 10px auto 0;
+}
+
+.service-description {
+  margin: 5% 0 3% 27%;
+  max-width: 50%;
+  text-align: left;
+  font-size: 120%;
+}
+
+.grid-box {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  grid-template-rows: repeat(2fr);
+  column-gap: 20%;
+  align-content: center;
+  margin: 0 auto;
+}
+
+.service-box li {
+  margin-bottom: 3%;
+  list-style: none;
+  text-align: left;
+  margin-bottom: 10%;
+}
+
+.service-box h3,
+.contact-box h3,
+.form h3 {
+  font-size: 110%;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  margin: 2% auto 5% 12%;
+}
+
+.contact-box {
+  text-align: left;
+  width: 60%;
+  margin-top: 50px;
+}
+
+.contact-box h3 {
+  margin: 0;
+  text-align: center;
+}
+
+.contact-box p {
+  word-spacing: 2px;
+  letter-spacing: 1px;
+  margin: 7% auto;
+}
+.contact-box a {
+  margin: 10px;
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 30px;
+  border-radius: 200px;
+  border: solid 1px #3498db;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.link {
+  text-align: center;
+}
+.contact-box a:link,
+.contact-box a:visited {
+  color: #3498db;
+  margin-left: 10px;
+}
+
+.contact-box a:hover,
+.contact-box a:active {
+  background-color: #1985c7;
+  border: 1px solid #1985c7;
+  color: #fff;
+}
+
+#about {
+  padding-top: 10%;
+}
+
+.programs-title {
+  font-size: 150%;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  margin: 2% auto 2% auto;
+  text-align: center;
+}
+
+.hero-service {
+  text-align: center;
+  margin: 3% 0 5% 0;
+  font-size: 120%;
+}
+
+.grid-box-container {
+  width: 90%;
+  margin: 0 auto 0 auto;
+  padding-bottom: 10%;
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  grid-template-rows: 50%;
+  column-gap: 100px;
+  row-gap: 100px;
+}
+
+.grid-box-container div {
+  text-align: center;
+  position: relative;
+}
+
+.grid-box-container img {
+  background-color: #3498db;
+  padding: 10px;
+  margin: 0;
+  margin-bottom: 2%;
+  border-radius: 20px;
+}
+
+.grid-box-container p {
+  text-align: left;
+  width: auto;
+  height: auto;
+  margin-top: 7%;
+  font-size: 110%;
+  word-spacing: 4px;
+}
+
+form {
+  max-width: 30%;
+  padding: 2%;
+  margin: 0 auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+form h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+form div {
+  margin-bottom: 20px;
+}
+
+form label {
+  display: inline;
+  margin-bottom: 10px;
+  color: #fff;
+  font-weight: 300;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #3498db;
+  border-radius: 10px;
+  background-color: #ffffff;
+  font-size: 100%;
+  font-weight: 300;
+  outline: none;
+  margin-top: 5px;
+}
+form input:focus,
+form textarea:focus {
+  border-color: #1b3c51;
+  outline: none;
+}
+
+form button {
+  text-align: center;
+  padding: 10px 40px;
+  border: 1px solid #1985c7;
+  border-radius: 20px;
+  background-color: #1985c7;
+  color: #fff;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+  cursor: pointer;
+  margin: 10px auto;
+}
+
+.submit-btn {
+  text-align: center;
+}
+form button:hover,
+form button:active {
+  border: 1px solid #fff;
+  background-color: #fff;
+  color: #1985c7;
+}
+
+footer {
+  background-color: #3498db;
+  text-align: center;
+  height: 100px;
+  color: #fff;
+}
+
+footer p {
+  padding-top: 40px;
+}
+@media (max-width: 1300px) {
+  html {
+    font-size: 15px;
+  }
+
+  .feature {
+    height: auto;
+    padding-bottom: 50px;
+  }
+
+  .feature-box-container {
+    max-width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    row-gap: 50px;
+    column-gap: 30px;
+  }
+
+  .feature-box {
+    width: 100%;
+    height: auto;
+
+    margin-left: 4%;
+  }
+  .service-description {
+    margin: 5% 0 2% 26%;
+    text-align: center;
+  }
+
+  .grid-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    column-gap: 5%;
+    align-content: center;
+    margin-bottom: 10%;
+  }
+  .contact-box,
+  .service-box {
+    width: 90%;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .service-box {
+    margin-left: 20px;
+  }
+
+  .grid-box-container {
+    max-width: 80%;
+    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  nav {
+    height: 60px;
+  }
+
+  html {
+    font-size: 13px;
+    font-weight: 400;
+  }
+
+  header {
+    height: 90vh;
+  }
+
+  .hero-text-box {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    text-align: center;
+  }
+
+  .about-btn:link,
+  .about-btn:visited {
+    left: 80%;
+  }
+
+  .features-btn:link,
+  .features-btn:visited {
+    left: 25%;
+  }
+
+  .service-btn:link,
+  .services-btn:visited {
+    left: 52%;
+  }
+
+  .home-btn:link,
+  .home-btn:visited {
+    left: 5%;
+  }
+
+  .hero-text-box {
+    width: 80%;
+  }
+
+  h1 {
+    font-size: 155%;
+  }
+
+  h1:after {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .text-box {
+    font-size: 75%;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  section h2 {
+    font-size: 130%;
+  }
+
+  section h2:after {
+    width: 80px;
+    margin-top: 10px;
+  }
+
+  .feature-box-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4 1fr);
+  }
+
+  .grid-box {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2 1fr);
+    column-gap: 20%;
+    align-content: center;
+    margin: 0 auto;
+    padding: 80px 0;
+  }
+
+  .contact-box,
+  .service-box {
+    width: 90%;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .service-box h3,
+  .programs-title {
+    margin-bottom: 20px;
+  }
+
+  .contact-box {
+    width: 100%;
+  }
+
+  .hero-service {
+    margin-bottom: 50px;
+  }
+
+  .grid-box-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+  }
+  .grid-box-container p {
+    text-align: left;
+  }
+
+  form {
+    max-width: 70%;
+  }
+}
